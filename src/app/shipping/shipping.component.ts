@@ -8,7 +8,7 @@ import { CartService } from '../cart.service'
   styleUrls: ['./shipping.component.css']
 })
 export class ShippingComponent {
-  shippingCosts !: Observable<{type:String, price:Number}[]>;
+  shippingCosts !: Observable<{type:string, price:number}[]>;
   
   constructor( private cartService:CartService){
     this.shippingCosts = cartService.getShippingPrices();

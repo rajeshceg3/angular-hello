@@ -126,7 +126,7 @@ app-top-bar h1 {
 
 .cart-item, .shipping-item {
   width: 100%;
-  min-width: 400px;
+  min-width: 0;
   max-width: 450px;
   display: flex;
   flex-direction: row;
@@ -143,3 +143,5 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+/* Routed components must be allowed to shrink inside the flex container. */
+router-outlet + * { min-width: 0; width: 100%; }
